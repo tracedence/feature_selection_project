@@ -16,7 +16,7 @@ def rf_rfe(df):
     #creating a model
     Ra = RandomForestClassifier()
     rf = RFE(Ra)
-    #
+    #selecting best features all avaiable features
     rf.fit(x,y) 
     most_sig = list(x.columns[rf.support_])
     return most_sig
